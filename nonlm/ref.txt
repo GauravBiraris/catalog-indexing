@@ -1,0 +1,13 @@
+The overall flow for the new app is:
+>>Index items using Whoosh for search speed.
+>>Use Annoy and NLTK to better handle synonyms and map to indexes.
+>>Build NetworkX graph on items for ranking.
+>>Search Whoosh index using mapped synonyms.
+>>Return ranked results using NetworkX graph algorithms.
+
+
+Whoosh: Replace inverted_index with Whoosh to provide faster indexing and search performance. Whoosh is a popular Python search library with advanced indexing and querying.
+Annoy: Use Annoy to build an item similarity index for content-based recommendations. It can efficiently find nearest neighbors/similar items.
+NLTK: Use NLTK's WordNet and synsets for better synonym detection. Also options for POS tagging and other NLP tasks.
+NetworkX: Build a graph network of item similarities and relationships. Use algorithms like PageRank to rank search results.
+PyDictionary: Keep using PyDictionary for initial synonym finding. Can also try NLTK WordNet in addition.
